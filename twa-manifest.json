@@ -1,0 +1,36 @@
+{
+  "packageId": "com.physiosus.app",
+  "host": "your-domain.com",
+  "name": "Physio SUS",
+  "launcherName": "Physio SUS",
+  "display": "standalone",
+  "themeColor": "#dc2626",
+  "navigationColor": "#0a0a0a",
+  "backgroundColor": "#0a0a0a",
+  "startUrl": "/",
+  "iconUrl": "https://your-domain.com/icon-512.png",
+  "maskableIconUrl": "https://your-domain.com/icon-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "physiosus"
+  },
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://your-domain.com/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {
+    "locationDelegation": {
+      "enabled": false
+    },
+    "playBilling": {
+      "enabled": false
+    }
+  },
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableNotifications": false
+}

@@ -1,0 +1,137 @@
+.install-floating {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d0000 100%);
+  border: 2px solid #dc2626;
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 10px 40px rgba(220, 38, 38, 0.4);
+  z-index: 9999;
+  max-width: 90%;
+  width: 400px;
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.install-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #dc2626;
+  border: 2px solid #1a1a1a;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.install-close:hover {
+  background: #991b1b;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(220, 38, 38, 0.6);
+}
+
+.install-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.install-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.install-icon img {
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+}
+
+.install-text {
+  flex: 1;
+}
+
+.install-text h3 {
+  font-size: 16px;
+  color: #fff;
+  margin: 0 0 4px 0;
+  font-weight: 700;
+}
+
+.install-text p {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+
+.install-btn {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+  letter-spacing: 0.5px;
+}
+
+.install-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.6);
+}
+
+.install-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .install-floating {
+    bottom: 10px;
+    width: calc(100% - 40px);
+    padding: 12px 16px;
+  }
+
+  .install-content {
+    gap: 12px;
+  }
+
+  .install-icon {
+    font-size: 28px;
+  }
+
+  .install-text h3 {
+    font-size: 14px;
+  }
+
+  .install-text p {
+    font-size: 11px;
+  }
+
+  .install-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
