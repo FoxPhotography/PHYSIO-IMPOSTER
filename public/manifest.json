@@ -5,7 +5,7 @@
   "description": "The ultimate muscle memory game for physiotherapy students",
   "start_url": "/",
   "scope": "/",
-  "display": "standalone",
+  "display": "browser",
   "background_color": "#0a0a0a",
   "theme_color": "#dc2626",
   "orientation": "portrait",

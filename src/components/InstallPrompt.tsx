@@ -9,8 +9,8 @@ const InstallPrompt = ({ onDismiss }: InstallPromptProps) => {
   const [isVisible, setIsVisible] = useState(true); // Always show
 
   const handleInstall = async () => {
-    // Direct download link for APK
-    window.open('https://your-domain.com/physio-sus.apk', '_blank');
+    // Direct download link for APK from Google Drive
+    window.open('https://download1980.mediafire.com/q3axapm8dergs5i2hcS-NjQtlkWETyv6I59uSkBfp7XlwjvNQpweHavO2xtsBs_aO5RpHwv4zxkJo-kDxI_xugZ9_PIvV2LocBXnjuPrYK0P4mJWaqLAyy1o6RtY4kW9kt-zGrcgFt8AWJZ_1Cn2iqaNIy-e6bMIIAZXJJl_j1Cn/nsyvfuc56316rbe/PhysioSUS.apk', '_blank');
     
     setIsVisible(false);
     onDismiss();

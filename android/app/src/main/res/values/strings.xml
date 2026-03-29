@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Physio SUS</string>
+    <string name="title_activity_main">Physio SUS</string>
+    <string name="package_name">com.physiosus.app</string>
+    <string name="custom_url_scheme">com.physiosus.app</string>
+</resources>
