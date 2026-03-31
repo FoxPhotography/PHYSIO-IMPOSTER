@@ -18,7 +18,8 @@ body {
   max-width: 480px;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Floating Bones Background Animation */

@@ -183,7 +183,9 @@ const GameScreen = ({ players, category, onPlayAgain, onNewGame, persistentScore
     return (
       <div className="game-screen">
         <div className="game-intro">
-          <div className="intro-icon">🎭</div>
+          <div className="intro-icon">
+            <img src="/sus-word-logo.jpg" alt="Physio SOS" className="intro-logo" />
+          </div>
           <h1>Ready to Play?</h1>
           <p>Pass the phone around. Each player will see their role.</p>
           <p className="intro-warning">One of you is the IMPOSTER!</p>

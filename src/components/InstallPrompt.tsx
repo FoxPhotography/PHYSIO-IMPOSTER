@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './InstallPrompt.css';
 
 interface InstallPromptProps {
@@ -6,11 +6,22 @@ interface InstallPromptProps {
 }
 
 const InstallPrompt = ({ onDismiss }: InstallPromptProps) => {
-  const [isVisible, setIsVisible] = useState(true); // Always show
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Only show on Android browser (not iOS, not desktop, not APK)
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const isInBrowser = !window.matchMedia('(display-mode: standalone)').matches && 
+                        !(navigator as any).standalone;
+    
+    if (isAndroid && isInBrowser) {
+      setIsVisible(true);
+    }
+  }, []);
 
   const handleInstall = async () => {
     // Direct download link for APK from Google Drive
-    window.open('https://download1980.mediafire.com/q3axapm8dergs5i2hcS-NjQtlkWETyv6I59uSkBfp7XlwjvNQpweHavO2xtsBs_aO5RpHwv4zxkJo-kDxI_xugZ9_PIvV2LocBXnjuPrYK0P4mJWaqLAyy1o6RtY4kW9kt-zGrcgFt8AWJZ_1Cn2iqaNIy-e6bMIIAZXJJl_j1Cn/nsyvfuc56316rbe/PhysioSUS.apk', '_blank');
+    window.open('https://drive.google.com/file/d/1bh_dinmtnylN1x0GQU4k1DEfidQR4abV/view?usp=sharing', '_blank');
     
     setIsVisible(false);
     onDismiss();

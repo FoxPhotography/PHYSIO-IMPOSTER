@@ -13,6 +13,16 @@
     <link rel="manifest" href="/manifest.json" />
     <title>Physio SOS - Muscle Memory Game</title>
     <style>
+      /* Prevent flash on load */
+      #root {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      #root.loaded {
+        opacity: 1;
+      }
+      
       /* Splash Screen Styles */
       #splash-screen {
         position: fixed;
@@ -58,6 +68,14 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script>
+      // Show root content smoothly
+      window.addEventListener('DOMContentLoaded', () => {
+        const root = document.getElementById('root');
+        if (root) {
+          root.classList.add('loaded');
+        }
+      });
+      
       // Hide splash screen after app loads
       window.addEventListener('load', () => {
         setTimeout(() => {
