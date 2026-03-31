@@ -21,7 +21,7 @@ const InstallPrompt = ({ onDismiss }: InstallPromptProps) => {
 
   const handleInstall = async () => {
     // Direct download link for APK from Google Drive
-    window.open('https://drive.google.com/file/d/1bh_dinmtnylN1x0GQU4k1DEfidQR4abV/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/1JN7cYtiYC6KVS_AvPhErkoRo0MNsakLB/view?usp=sharing', '_blank');
     
     setIsVisible(false);
     onDismiss();
